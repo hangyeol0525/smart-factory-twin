@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import FactoryScene from './components/Scene3D/FactoryScene'
 import MachineCard from './components/Dashboard/MachineCard'
 import AlertBanner from './components/Dashboard/AlertBanner'
+import StatusChart from './components/Dashboard/StatusChart'
 import { generateSensorData } from './data/sensorSimulator'
 
 export default function App() {
@@ -56,6 +57,8 @@ export default function App() {
               />
             ))}
           </div>
+
+          <StatusChart machines={machines} />
 
           {selectedMachine && (
             <div className="mt-2 p-3 rounded-lg border border-blue-700 bg-blue-950/30">
